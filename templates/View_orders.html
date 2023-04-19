@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Display Orders </title>
+    <link rel="stylesheet" href="../static/myfiles/CSS/mystyle.css">
+    <link rel="stylesheet" href="../static/bootstrap/bootstrap.min.css">
+</head>
+<body>
+    
+    <!--Daily fresh Title page -->
+    <div class="container">
+        <div class="d-flex justify-content-center" id="title">
+            <h1> Daily Fresh </h1>
+           
+        </div>
+        <div class="d-flex justify-content-center  blink" id="title">
+            <h2>Eat Fresh To Be Best</h2>
+        </div>
+        <div class="d-flex justify-content-center" id="title">
+            <hr id="myhr">
+        </div>
+        <div class="d-flex justify-content-center" >       
+            <a href="/" class="btn btn-success btn-lg">Back To Home</a>     
+        </div>
+        <div class="d-flex justify-content-center" id="title">
+            <hr id="myhr">
+        </div>
+    </div>
+    <!--Daily fresh tite Ends here-->
+
+    <!-- Display content Page-->
+
+    <div class="container">
+        <div class="container" id="mytable"> 
+            <table class="table table-light table-striped table-responsive{-sm|-md|-lg|-xl}">
+                <thead class="thead-mydesign">
+                    <tr>
+                        <th scope="col"> Order ID       </th>
+                        <th scope="col"> Customer Name  </th>
+                        <th scope="col"> Grand Total    </th>
+                        <th scope="col"> Order Time     </th>
+                        <th scope="col"> View Details   </th>
+                    </tr>
+                </thead>
+    
+                <tbody class="tbody table-hover" id="tbody">
+                       
+                </tbody>
+            </table>          
+        </div>    
+    </div>
+
+
+
+
+
+
+
+</body>
+<script src="../static/jquery/jquery-3.6.4.min.js"></script>
+<script src="../static/bootstrap/bootstrap.min.js"></script>
+<script src="../static/myfiles/JS/vieworder_script.js"></script>
+</html>

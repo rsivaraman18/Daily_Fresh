@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Order page </title>
+    <link rel="stylesheet" href="../static/myfiles/CSS/mystyle.css">
+    <link rel="stylesheet" href="../static/bootstrap/bootstrap.min.css">
+
+</head>
+<body>
+    <!--Daily fresh Title page -->
+    <div class="container">
+        <div class="d-flex justify-content-center" id="title">
+            <h1> Daily Fresh </h1>
+           
+        </div>
+        <div class="d-flex justify-content-center  blink" id="title">
+            <h2>Eat Fresh To Be Best</h2>
+        </div>
+        <div class="d-flex justify-content-center" id="title">
+            <hr id="myhr">
+        </div>
+        <div class="d-flex justify-content-center" >       
+            <a href="/" class="btn btn-success btn-lg">Back To Home</a>     
+        </div>
+        <div class="d-flex justify-content-center" id="title">
+            <hr id="myhr">
+        </div>
+    </div>
+    <!--Daily fresh tite Ends here-->
+        
+    <div id="formcontainer">
+    <form action="" name="purchaseform" autocomplete="off"  >
+        <div class="row d-flex justify-content-center " id="customer" >     
+            <input type="text" name="cnames" id="cname" class="formelements" placeholder="Customer Name" required>  
+            <input type="button" value="Buy More items" id="buymore" class="btn btn-warning btn-lg">   
+        </div>
+
+        
+        <div class="container"  id="mainitembox">   <!-- Main Item box -->
+            <div class="container" id="itembox">       <!-- single Item box-->
+
+                <div class="row selparent"  >
+                    <div class="col-sm-3 form-control">
+                        <label for="name"  class="formelements" >Item</label>
+                        <select name="selectabs" id="selectitem"  class="selectitems" >
+                            <option value=""> --choose me-- </option>                 
+                        </select>
+                    </div>
+
+                    <div class="col-sm-2  form-control" >
+                        <label for="myprice" class="formelements" >Price</label>
+                        <input type="text"  id="myprice" class="myprices"  style="width: 70px;">
+                    </div>
+        
+                    <div class="col-sm-2  form-control" >
+                        <label for="myunit"  class="formelements" >Unit</label>
+                        <input type="text"  id="myunit"  class="myunits" style="width: 50px;">   
+                    </div>
+        
+                    <div class="col-sm-2  form-control" id="ourprice">
+                        <label for="myqnty"  class="formelements" >Qty</label>
+                        <input type="number" id="myquantity" class="myquantitys"  value=1 onclick="showitemvalues( )"  onkeyup="showitemvalues( )" style="width: 70px;">
+                    </div> 
+        
+                    <div class="col-sm-3 form-control">
+                        <label for="mytotals"  class="formelements" >Total</label>
+                        <input type="text" id="mytotal" class="mytotals" disabled  style="width: 80px;">
+                    </div>
+                </div>
+            </div>       <!-- single Item box Ends here--> <!--Place content after this-->
+
+
+
+
+
+
+        </div>         <!-- Main Item box Ends Here--> <!--append everything before this-->
+            
+        
+                
+            
+        
+        <div class="container " id="gtoaldisplay" >
+            <div class="row">            
+                <div class="col-md-3 offset-md-6 form-control">
+                    <label for="gtotal" class=""> Grand Total</label>
+                    <input type="number"  id="gtot" disabled  style="width: 155px;">
+                </div>
+
+                <div class="col-md-2 ">
+                    <input type="submit" value="Finish shopping " class="btn btn-success btn-lg" onclick="saveme()" >
+                </div>      
+            
+            </div>           
+        </div>
+        
+    </form>
+
+    
+</body>
+<script src="../static/jquery/jquery-3.6.4.min.js"></script>
+<script src="../static/bootstrap/bootstrap.min.js"></script>
+<script src="../static/myfiles/JS/order_script.js"></script>
+</html>

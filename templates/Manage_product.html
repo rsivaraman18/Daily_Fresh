@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Manage Products </title>
+    <link rel="stylesheet" href="../static/myfiles/CSS/mystyle.css">
+   <link rel="stylesheet" href="../static/bootstrap/bootstrap.min.css">
+   
+    
+    
+</head>
+<body>
+    <!--Daily fresh Title page -->
+    <div class="container">
+        <div class="d-flex justify-content-center" id="title">
+            <h1> Daily Fresh </h1>
+           
+        </div>
+        <div class="d-flex justify-content-center  blink" id="title">
+            <h2>Eat Fresh To Be Best</h2>
+        </div>
+        <div class="d-flex justify-content-center" id="title">
+            <hr id="myhr">
+        </div>
+        <div class="d-flex justify-content-center" >
+            <!--Add button & Update Button-->           
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add-myproduct"> Add new product </button>
+            <button type="button" class="btn btn-warning btn-lg " data-toggle="modal" data-target="#update_product"> Update product </button>    
+            <a href="/" class="btn btn-success btn-lg">Back To Home</a>     
+        </div>
+        <div class="d-flex justify-content-center" id="title">
+            <hr id="myhr">
+        </div>
+    </div>
+
+
+<!--Add New Product Modal -->
+    <div class="container" id="addyourproduct">
+        
+        <div class="modal fade" id="add-myproduct"  role="dialog">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+    
+                <div class="modal-header">
+                    <h5 class="modal-title" id="title"> Add Today's New Product </h5>
+                    <button type="button" class="close" data-dismiss="modal" >
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+    
+                <form   name="myform" class="mainform" autocomplete="off">
+    
+                <div class="modal-body">
+                
+                    <div class="form-group">
+                        <label for="pname" class="formelements">Product Name </label>
+                        <input type="text" class="form-control" id="pname"  placeholder="Enter product name" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="punit" class="formelements">Product Unit</label>
+                        <select class="form-control" id="punit" >
+                        <option value="kg">Kilogram</option>
+                        <option value="each">Each</option>
+                        <option value="packet">Packet</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="pprice" class="formelements">Product Price </label>
+                        <input type="text" class="form-control" id="pprice"  placeholder="Enter product price" required>
+                    </div>    
+                
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-info" onclick="insert()"> Insert Product </button>                   
+                </div>
+
+                </form>
+            </div>
+        </div>
+        </div>
+      
+    </div>
+<!--Add New Product Modal Ends here-->   
+
+
+<!-- Update Product Modal -->
+<div class="container" id="addyourproduct">
+
+    <div class="modal fade" id="update_product"  role="dialog">
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="title"> Ready to Update</h5>
+                <button type="button" class="close" data-dismiss="modal" >
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form   name="updateform" class="updateform" autocomplete="off">
+
+            <div class="modal-body">
+                
+                <div class="form-group">
+                    <label for="uid"  class="formelements">Product Id </label>
+                    <input type="number" class="form-control" id="uid"  placeholder="Enter product id" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="uname"  class="formelements">Product Name </label>
+                    <input type="text" class="form-control" id="uname"  placeholder="Enter product name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="uunit"  class="formelements">Product Unit</label>
+                    <select class="form-control" id="uunit" >
+                        <option value="kg">Kilogram</option>
+                        <option value="each">Each</option>
+                        <option value="packet">Packet</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="uprice"  class="formelements">Product Price </label>
+                    <input type="text" class="form-control" id="uprice"  placeholder="Enter product price" required>
+                </div>    
+            
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" onclick="update()"> Update Product </button>
+            </div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+  
+</div>
+<!-- Update Product Modal Ends here-->   
+
+
+
+
+
+
+
+
+
+
+<!--Add Main table starts here-->  
+    <div class="container" id="mytable">
+
+        <div id="display-action"></div>
+        <div id="display-flash"></div>
+
+        <table class="table table-light table-striped table-responsive{-sm|-md|-lg|-xl}">
+            <thead class="thead-mydesign">
+                <tr>
+                    <th scope="col">Product ID </th>
+                    <th scope="col">Name  </th>
+                    <th scope="col">Price  </th>
+                    <th scope="col">Unit </th>
+                    <th scope="col">Action </th>
+                </tr>
+            </thead>
+
+            <tbody class="tbody table-hover" id="tbody">
+                
+                   
+            </tbody>
+        </table>
+          	
+    </div>
+
+
+
+</body>
+<script src="../static/jquery/jquery-3.6.4.min.js"></script>
+<script src="../static/bootstrap/bootstrap.min.js"></script>
+<script src="../static/myfiles/JS/manage_script.js"></script>
+</html
