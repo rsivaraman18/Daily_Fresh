@@ -1,0 +1,142 @@
+body{
+    /*background-color: lightcoral;*/
+    background-image: url("../images/bg3.jpg");
+    background-color: rgba(0, 0,0, 1);
+}
+
+/* Flex wrapping cards to make it responsive starts here */
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.flex-container >div{
+    margin: 50px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 15px;
+    width: 300px;
+    max-height: fit-content;
+    
+}
+
+/* Flex wrapping cards to make it responsive ends here*/
+
+#title{
+    color:white
+   
+}
+
+/* Blink effect to a text */
+
+.blink{  
+    padding: 15px;	
+    text-align: center;
+    line-height: 90px;
+    animation: blink 1s linear infinite;
+    font-family: cursive;
+}
+
+
+@keyframes blink{
+0%{opacity: 0;}
+50%{opacity: .5;}
+100%{opacity: 1;}
+}
+
+/* Blink effect to a text ends here*/
+
+/*    Hover effect on cards */
+
+.card:hover{
+    transform: scale(1.25);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+/*    Hover effect on cards ends here */
+
+/* Main table design */
+
+.table{
+    margin-right: 5%;
+}
+
+.thead-mydesign{
+    background-color: rgb(0, 255, 234);
+}
+
+.tbody tr{
+    font-size:medium;
+    font-weight:bold
+}
+/* Main table design ends here */
+
+
+/* Modal Body design */
+
+.modal-content{
+    background-image: url("../images/pic3-min.jpg");
+    background-color: rgba(0, 0,0, .3);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.form-control{
+    text-transform: capitalize;
+    font-weight: bolder;
+    
+}
+
+.formelements{
+    font-weight:800;
+    text-transform: capitalize;
+
+}
+
+
+
+/* Modal Body design ends here */
+
+/* Orderprod page*/
+#customer{
+    margin-bottom: 10px;
+}
+
+.myquantitys,.mytotals ,.myunits , .myprices ,.selectitems ,#gtoaldisplay,#cname,#gtot{
+    font-weight: bolder;
+    font-size: larger;
+   
+
+}
+
+#cname,#gtot{
+    padding: 10px;
+}
+
+#gtoaldisplay{
+    margin-top: 10%;
+}
+
+
+.flex-container1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont{
+    color:rgb(17, 85, 231);
+    font-weight: bold;
+    font-style: italic;
+}
+
+#banner{
+    background-color: antiquewhite;
+}
