@@ -3,7 +3,7 @@ import mysql.connector
 con = mysql.connector.connect(host ="rsivaraman1.mysql.pythonanywhere-services.com" , user ="rsivaraman1" , password="sivasiva" , database = "rsivaraman1$daily_fresh" )
 
 #con =mysql.connector.connect(host = 'localhost',user = 'root', password='siva',database = 'daily_fresh')
-print('MYSQL DB database connection successful for ORDER page')
+print('MYSQL DB database connection successful for ORDER page') 
  
 def insert_order(neworder):
     cur = con.cursor()
