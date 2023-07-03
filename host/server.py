@@ -7,7 +7,7 @@ app = Flask ( __name__)
 
 @app.route("/" )
 def indexpage( ) :
-    return render_template("Index.html")
+    return render_template("Index.html") 
 
 @app.route("/mgproduct" )
 def manageproduct( ) :
