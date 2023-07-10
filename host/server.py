@@ -5,7 +5,6 @@ import order_dao
 print("I am ready2" )
 app = Flask ( __name__)
 
-
 @app.route("/" )
 def indexpage( ) :
     return render_template("Index.html") 
