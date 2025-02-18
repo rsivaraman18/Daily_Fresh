@@ -2,7 +2,7 @@ from flask import Flask ,request ,jsonify,render_template,url_for
 import product_dao
 import order_dao
 app = Flask ( __name__) 
-
+ 
 @app.route("/" ) 
 def indexpage( ) :
     return render_template("Index.html")
