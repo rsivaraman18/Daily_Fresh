@@ -2,7 +2,7 @@ from datetime import datetime
 import mysql.connector
 con =mysql.connector.connect(host = 'localhost',user = 'root', password='siva',database = 'daily_fresh')
 #print('MYSQL DB database connection successful for ORDER page')
-
+ 
 def insert_order(neworder):
     cur = con.cursor() 
     ord_query1 = " INSERT INTO orders (customer_name,grand_total,order_time) VALUES (%s,%s,%s ) " 
