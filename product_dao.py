@@ -3,7 +3,7 @@ import mysql.connector
 con =mysql.connector.connect(host = 'localhost',user = 'root', password='siva',database = 'daily_fresh')
 #print( 'MYSQL DB database connection successful')
  
- 
+  
 def show_products():
     cur =con.cursor( )
     query = 'SELECT * FROM products'
